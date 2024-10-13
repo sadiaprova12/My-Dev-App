@@ -1,3 +1,4 @@
+import Tag from "../components/Tag";
 const skills = [
     "JavaScript (ES6+)",
     "React.js",
@@ -18,7 +19,11 @@ const Skills = () => {
             <h2 className="text-slate-lg md:text-slate-2xl text-secondary-foreground mb-3 text-slate-500 font-semibold">Skills</h2>
             <ul className="flex flex-wrap leading-10 ">
                 {skills.map((skill, index) => (
-                   <li key={index}>{skill}</li>
+                   <li key={index}
+                   className="mr-2"
+                   >
+                    <Tag name={skill} />
+                    </li>
                 ))}
             </ul>
         </section>
